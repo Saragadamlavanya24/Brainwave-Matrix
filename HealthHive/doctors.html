@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doctors Directory - HealthHive</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">HealthHive 🐝</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="doctors.html" class="active">Doctors</a></li>
+        <li><a href="appointment.html">Book Appointment</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="toggleDark" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1>Find a Doctor</h1>
+
+      <div class="search-filter">
+        <input
+          type="text"
+          id="doctorSearch"
+          placeholder="Search doctors by name, specialty, or city..."
+          autocomplete="off"
+        />
+        <select id="specialtyFilter" aria-label="Filter by Specialty">
+          <option value="">All Specialties</option>
+          <option value="Cardiologist">Cardiologist</option>
+          <option value="Neurologist">Neurologist</option>
+          <option value="Dentist">Dentist</option>
+          <option value="Dermatologist">Dermatologist</option>
+          <option value="Psychiatrist">Psychiatrist</option>
+        </select>
+        <select id="cityFilter" aria-label="Filter by City">
+          <option value="">All Cities</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Bangalore">Bangalore</option>
+        </select>
+      </div>
+
+      <div class="cards-container" id="doctorsList">
+        <!-- JS dynamically renders doctors here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HealthHive. All rights reserved.</p>
+  </footer>
+</body>
+</html>

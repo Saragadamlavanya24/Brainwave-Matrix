@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Health Articles - HealthHive</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">HealthHive 🐝</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="appointment.html">Book Appointment</a></li>
+        <li><a href="articles.html" class="active">Articles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="toggleDark" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1>Health Articles & Tips</h1>
+
+      <input
+        type="text"
+        id="articleSearch"
+        placeholder="Search articles by title or keywords..."
+        autocomplete="off"
+        class="search-input"
+      />
+
+      <div class="cards-container" id="articlesList">
+        <!-- JS dynamically loads articles here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HealthHive. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Appointment - HealthHive</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">HealthHive 🐝</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="appointment.html" class="active">Book Appointment</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="toggleDark" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1>Book Your Appointment</h1>
+      <form id="appointmentForm" novalidate>
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" name="fullName" required placeholder="Your full name" />
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" required placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+
+        <label for="doctorSelect">Select Doctor *</label>
+        <select id="doctorSelect" name="doctorSelect" required>
+          <option value="">-- Choose a doctor --</option>
+          <!-- JS will populate doctor options -->
+        </select>
+
+        <label for="date">Preferred Date *</label>
+        <input type="date" id="date" name="date" required min="" />
+
+        <label for="time">Preferred Time *</label>
+        <input type="time" id="time" name="time" required />
+
+        <button type="submit">Book Appointment</button>
+      </form>
+      <p id="formStatus" aria-live="polite" role="alert"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HealthHive. All rights reserved.</p>
+  </footer>
+</body>
+</html>
